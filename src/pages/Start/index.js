@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import './start.css';
 
-const Start = () => {
+const Start = ({players, updatePlayers}) => {
+
   const [name, setName] = useState({
     player1: '',
     player2: '',
@@ -21,7 +22,6 @@ const Start = () => {
 
   const startGame = (e) => {
     e.preventDefault();
-    console.log(name);
   };
 
   return (
@@ -32,8 +32,8 @@ const Start = () => {
           type='text'
           id='player1'
           placeholder='Player 1'
-          value={name.player1}
-          onChange={handleChange}
+          value={players.player1 || ""}
+          onChange={updatePlayers}
           autoComplete='off'
         />
         <input
