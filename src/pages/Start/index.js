@@ -1,81 +1,81 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import './start.css';
 
-const Start = ({players, updatePlayers}) => {
-
-  const [name, setName] = useState({
-    player1: '',
-    player2: '',
-    player3: '',
-    player4: '',
-    player5: '',
-    player6: '',
-  });
-
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setName({
-      ...name,
-      [e.target.id]: value,
-    });
-  };
+const Start = ({ players, updatePlayer }) => {
+  const [numberOfPlayers, setNumberOfPlayers] = useState(2);
 
   const startGame = (e) => {
     e.preventDefault();
   };
 
+  console.log(numberOfPlayers);
+
   return (
     <div>
       <h2>Choose Players</h2>
+      <button onClick={() => setNumberOfPlayers(2)}>2</button>
+      <button onClick={() => setNumberOfPlayers(3)}>3</button>
+      <button onClick={() => setNumberOfPlayers(4)}>4</button>
+      <button onClick={() => setNumberOfPlayers(5)}>5</button>
+      <button onClick={() => setNumberOfPlayers(6)}>6</button>
       <form>
         <input
           type='text'
           id='player1'
           placeholder='Player 1'
-          value={players.player1 || ""}
-          onChange={updatePlayers}
+          value={players.player1 || ''}
+          onChange={updatePlayer}
           autoComplete='off'
         />
         <input
           type='text'
           id='player2'
           placeholder='Player 2'
-          value={name.player2}
-          onChange={handleChange}
+          value={players.player2}
+          onChange={updatePlayer}
           autoComplete='off'
         />
-        <input
-          type='text'
-          id='player3'
-          placeholder='Player 3'
-          value={name.player3}
-          onChange={handleChange}
-          autoComplete='off'
-        />
-        <input
-          type='text'
-          id='player4'
-          placeholder='Player 4'
-          value={name.player4}
-          onChange={handleChange}
-          autoComplete='off'
-        />
-        <input
-          type='text'
-          id='player5'
-          placeholder='Player 5'
-          value={name.player5}
-          onChange={handleChange}
-          autoComplete='off'
-        />
-        <input
-          type='text'
-          id='player6'
-          placeholder='Player 6'
-          value={name.player6}
-          onChange={handleChange}
-          autoComplete='off'
-        />
+        {numberOfPlayers > 2 ? (
+          <input
+            type='text'
+            id='player3'
+            placeholder='Player 3'
+            value={players.player3}
+            onChange={updatePlayer}
+            autoComplete='off'
+          />
+        ) : null}
+
+        {numberOfPlayers > 3 ? (
+          <input
+            type='text'
+            id='player4'
+            placeholder='Player 4'
+            value={players.player4}
+            onChange={updatePlayer}
+            autoComplete='off'
+          />
+        ) : null}
+        {numberOfPlayers > 4 ? (
+          <input
+            type='text'
+            id='player5'
+            placeholder='Player 5'
+            value={players.player5}
+            onChange={updatePlayer}
+            autoComplete='off'
+          />
+        ) : null}
+        {numberOfPlayers > 5 ? (
+          <input
+            type='text'
+            id='player6'
+            placeholder='Player 6'
+            value={players.player6}
+            onChange={updatePlayer}
+            autoComplete='off'
+          />
+        ) : null}
         <button onClick={startGame}>Start Game</button>
       </form>
     </div>

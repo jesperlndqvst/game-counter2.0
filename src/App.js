@@ -13,7 +13,7 @@ import NotFound from './pages/NotFound';
 const App = () => {
   const [players, setPlayers] = useState({});
 
-  const updatePlayers = (e) => {
+  const updatePlayer = (e) => {
     const value = e.target.value;
     setPlayers({
       ...players,
@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className='App'>
       <Router>
-        <Start path='/' players={players} updatePlayers={updatePlayers} />
+        <Start path='/' players={players} updatePlayer={updatePlayer} />
         <Game path='/game' players={players} />
         <NotFound default />
       </Router>
