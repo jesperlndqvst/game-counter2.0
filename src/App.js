@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 // Pages
@@ -25,7 +25,6 @@ const App = () => {
   const startGame = (e) => {
     e.preventDefault();
     setGameIsStarted(true);
-    console.log(players);
   };
 
   return (
