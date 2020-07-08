@@ -23,7 +23,7 @@ const Start = ({ players, updatePlayer }) => {
           type='text'
           id='player1'
           placeholder='Player 1'
-          value={players.player1 || ''}
+          value={players.player1}
           onChange={updatePlayer}
           autoComplete='off'
         />
@@ -35,7 +35,7 @@ const Start = ({ players, updatePlayer }) => {
           onChange={updatePlayer}
           autoComplete='off'
         />
-        {numberOfPlayers > 2 ? (
+        {numberOfPlayers > 2 && (
           <input
             type='text'
             id='player3'
@@ -44,9 +44,9 @@ const Start = ({ players, updatePlayer }) => {
             onChange={updatePlayer}
             autoComplete='off'
           />
-        ) : null}
+        )}
 
-        {numberOfPlayers > 3 ? (
+        {numberOfPlayers > 3 && (
           <input
             type='text'
             id='player4'
@@ -55,8 +55,8 @@ const Start = ({ players, updatePlayer }) => {
             onChange={updatePlayer}
             autoComplete='off'
           />
-        ) : null}
-        {numberOfPlayers > 4 ? (
+        )}
+        {numberOfPlayers > 4 && (
           <input
             type='text'
             id='player5'
@@ -65,8 +65,8 @@ const Start = ({ players, updatePlayer }) => {
             onChange={updatePlayer}
             autoComplete='off'
           />
-        ) : null}
-        {numberOfPlayers > 5 ? (
+        )}
+        {numberOfPlayers > 5 && (
           <input
             type='text'
             id='player6'
@@ -75,7 +75,7 @@ const Start = ({ players, updatePlayer }) => {
             onChange={updatePlayer}
             autoComplete='off'
           />
-        ) : null}
+        ) }
         <button onClick={startGame}>Start Game</button>
       </form>
     </div>
