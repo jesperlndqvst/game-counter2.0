@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Router } from '@reach/router';
 
 // Pages
 
@@ -12,6 +11,8 @@ import NotFound from './pages/NotFound';
 
 const App = () => {
   const [players, setPlayers] = useState({});
+  const [gameIsStarted, setGameIsStarted] = useState(false);
+  const [scores, setScores] = useState({});
 
   const updatePlayer = (e) => {
     const value = e.target.value;
@@ -21,15 +22,23 @@ const App = () => {
     });
   };
 
-  console.log(players);
+  const startGame = (e) => {
+    e.preventDefault();
+    setGameIsStarted(true);
+    console.log(players);
+  };
 
   return (
     <div className='App'>
-      <Router>
-        <Start path='/' players={players} updatePlayer={updatePlayer} />
-        <Game path='/game' players={players} />
-        <NotFound default />
-      </Router>
+      {!gameIsStarted ? (
+        <Start
+          players={players}
+          updatePlayer={updatePlayer}
+          startGame={startGame}
+        />
+      ) : (
+        <Game />
+      )}
     </div>
   );
 };

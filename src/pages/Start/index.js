@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import './start.css';
 
-const Start = ({ players, updatePlayer }) => {
+const Start = ({players, updatePlayer, startGame }) => {
   const [numberOfPlayers, setNumberOfPlayers] = useState(2);
-
-  const startGame = (e) => {
-    e.preventDefault();
-  };
-
-  console.log(numberOfPlayers);
 
   return (
     <div>
@@ -76,7 +70,7 @@ const Start = ({ players, updatePlayer }) => {
             autoComplete='off'
           />
         ) }
-        <button onClick={startGame}>Start Game</button>
+        <button onClick={startGame}>Start</button>
       </form>
     </div>
   );
