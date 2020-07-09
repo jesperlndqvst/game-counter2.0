@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './start.css';
-import validateForm from '../../functions/validateForm';
 
 const Start = ({ players, updatePlayer, startGame }) => {
   const [numberOfPlayers, setNumberOfPlayers] = useState(2);
-  const isValidForm = validateForm(players, numberOfPlayers);
+ 
 
   return (
     <div>
@@ -19,7 +18,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
           type='text'
           id='player1'
           placeholder='Player 1'
-          value={players.player1 || ''}
+          value={players.player1.username || ""}
           onChange={updatePlayer}
           autoComplete='off'
         />
@@ -27,7 +26,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
           type='text'
           id='player2'
           placeholder='Player 2'
-          value={players.player2 || ''}
+          value={players.player2.username || ''}
           onChange={updatePlayer}
           autoComplete='off'
         />
@@ -36,7 +35,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
             type='text'
             id='player3'
             placeholder='Player 3'
-            value={players.player3 || ''}
+            value={players.player3.username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -47,7 +46,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
             type='text'
             id='player4'
             placeholder='Player 4'
-            value={players.player4 || ''}
+            value={players.player4.username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -57,7 +56,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
             type='text'
             id='player5'
             placeholder='Player 5'
-            value={players.player5 || ''}
+            value={players.player5.username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -67,12 +66,12 @@ const Start = ({ players, updatePlayer, startGame }) => {
             type='text'
             id='player6'
             placeholder='Player 6'
-            value={players.player6 || ''}
+            value={players.player6.username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
         )}
-        {isValidForm && <button onClick={startGame}>Start</button>}
+        <button onClick={startGame}>Start</button>
       </form>
     </div>
   );
