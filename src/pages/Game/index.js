@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Game = ({ players }) => {
+  console.log(players);
   const playersArray = Object.values(players).filter(
     (players) => players.username !== ''
   );

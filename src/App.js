@@ -7,45 +7,49 @@ import Start from './pages/Start';
 import Game from './pages/Game';
 import NotFound from './pages/NotFound';
 
-
 const App = () => {
-  const [players, setPlayers] = useState({
-    player1: {
+  const [players, setPlayers] = useState([
+    {
+      id: 1,
       username: '',
       score: 0,
     },
-    player2: {
+    {
+      id: 2,
       username: '',
       score: 0,
     },
-    player3: {
+    {
+      id: 3,
       username: '',
       score: 0,
     },
-    player4: {
+    {
+      id: 3,
       username: '',
       score: 0,
     },
-    player5: {
+    {
+      id: 4,
       username: '',
       score: 0,
     },
-    player6: {
+    {
+      id: 5,
       username: '',
       score: 0,
     },
-  });
+  ]);
   const [gameIsStarted, setGameIsStarted] = useState(false);
 
   const updatePlayer = (e) => {
     const value = e.target.value;
-    setPlayers({
-      ...players,
-      [e.target.id]: {
-        username: value,
-        score: 0,
-      },
-    });
+
+    console.log(e.target);
+    console.log(players);
+
+    setPlayers(players[0].username = value);
+    console.log(players);
   };
 
   const startGame = (e) => {

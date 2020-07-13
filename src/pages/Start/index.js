@@ -3,7 +3,21 @@ import './start.css';
 
 const Start = ({ players, updatePlayer, startGame }) => {
   const [numberOfPlayers, setNumberOfPlayers] = useState(2);
- 
+
+
+  // let playersComponent = [];
+
+  // for (let i = 0; i < numberOfPlayers; i++) {
+  //   playersComponent.push(
+  //     <input
+  //       key={Object.keys(players)[numberOfPlayers[i]]}
+  //       placeholder={`Player ${numberOfPlayers[i]}`}
+  //       value={players[numberOfPlayers].username || ""}
+  //       onChange={updatePlayer}
+  //       autoComplete='off'
+  //     />
+  //   );
+  // }
 
   return (
     <div>
@@ -16,26 +30,26 @@ const Start = ({ players, updatePlayer, startGame }) => {
       <form>
         <input
           type='text'
-          id='player1'
+          id='1'
           placeholder='Player 1'
-          value={players.player1.username || ""}
+          value={players[0].username || ''}
           onChange={updatePlayer}
           autoComplete='off'
         />
         <input
           type='text'
-          id='player2'
+          id='2'
           placeholder='Player 2'
-          value={players.player2.username || ''}
+          value={players[1].username || ''}
           onChange={updatePlayer}
           autoComplete='off'
         />
         {numberOfPlayers > 2 && (
           <input
             type='text'
-            id='player3'
+            id='3'
             placeholder='Player 3'
-            value={players.player3.username || ''}
+            value={players[0].player3.username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -44,9 +58,9 @@ const Start = ({ players, updatePlayer, startGame }) => {
         {numberOfPlayers > 3 && (
           <input
             type='text'
-            id='player4'
+            id='4'
             placeholder='Player 4'
-            value={players.player4.username || ''}
+            value={players[0].player4.username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -54,9 +68,9 @@ const Start = ({ players, updatePlayer, startGame }) => {
         {numberOfPlayers > 4 && (
           <input
             type='text'
-            id='player5'
+            id='5'
             placeholder='Player 5'
-            value={players.player5.username || ''}
+            value={players[0].player5.username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -64,9 +78,9 @@ const Start = ({ players, updatePlayer, startGame }) => {
         {numberOfPlayers > 5 && (
           <input
             type='text'
-            id='player6'
+            id='6'
             placeholder='Player 6'
-            value={players.player6.username || ''}
+            value={players[0].player6.username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
