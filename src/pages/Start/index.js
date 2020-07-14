@@ -7,13 +7,13 @@ const Start = ({ players, updatePlayer, startGame }) => {
   let playersComponent = [];
 
   for (let i = 0; i < numberOfPlayers; i++) {
-    const el = players[i];
+    const player = players[i];
     playersComponent.push(
       <input
-        key={el.id}
-        id={el.id}
-        placeholder={`Player ${el.id}`}
-        value={el.username || ''}
+        key={player.id}
+        id={player.id}
+        placeholder={`Player ${player.id}`}
+        value={player.username}
         onChange={updatePlayer}
         autoComplete='off'
       />

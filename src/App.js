@@ -40,20 +40,36 @@ const App = () => {
       score: 0,
     },
   ]);
+
   const [gameIsStarted, setGameIsStarted] = useState(false);
+  const [activePlayer, setActivePlayer] = useState({});
 
   const updatePlayer = (e) => {
     const value = e.target.value;
     const id = parseInt(e.target.id);
-    const playerId = players.find(el => el.id === id).id;
+    const playerId = players.find((el) => el.id === id).id;
     let newArray = [...players];
-    newArray[playerId -1].username = value
+    newArray[playerId - 1].username = value;
     setPlayers(newArray);
   };
 
   const startGame = (e) => {
     e.preventDefault();
     setGameIsStarted(true);
+    setPlayers(players.filter((players) => players.username !== ''));
+  };
+
+  const selectPlayer = (e) => {
+    setActivePlayer(
+      players.find((item) => item.username === e.currentTarget.dataset.id)
+    );
+  };
+
+  const updateScore = () => {
+    const playerId = activePlayer.id;
+    let newArray = [...players];
+    newArray[playerId - 1].score += 5;
+    setPlayers(newArray);
   };
 
   return (
@@ -65,7 +81,11 @@ const App = () => {
           startGame={startGame}
         />
       ) : (
-        <Game players={players} />
+        <Game
+          players={players}
+          selectPlayer={selectPlayer}
+          updateScore={updateScore}
+        />
       )}
     </div>
   );

@@ -1,18 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Game = ({ players }) => {
-  const playersArray = players.filter((players) => players.username !== '');
-  const [activePlayer, setActivePlayer] = useState('');
-  const handleClick = (e) => {
-    setActivePlayer(
-      playersArray.find((item) => item.username === e.currentTarget.dataset.id)
-    );
-  };
-
-  console.log(activePlayer);
-
-  const playersCompenent = playersArray.map((player) => (
-    <div data-id={player.username} onClick={handleClick} key={player.username}>
+const Game = ({ players, selectPlayer, updateScore }) => {
+  
+  const playersCompenent = players.map((player) => (
+    <div data-id={player.username} onClick={selectPlayer} key={player.username}>
       <p>{player.username}</p>
       <p>{player.score}</p>
     </div>
@@ -21,7 +12,7 @@ const Game = ({ players }) => {
   return (
     <div>
       {playersCompenent}
-      <button>Click</button>
+      <button onClick={updateScore}>Click</button>
     </div>
   );
 };
