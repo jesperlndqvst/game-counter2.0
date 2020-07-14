@@ -20,6 +20,18 @@ const Start = ({ players, updatePlayer, startGame }) => {
     );
   }
 
+  const validateInputs = () => {
+    const inputValues = [];
+    for (let i = 0; i < numberOfPlayers; i++) {
+      const player = players[i];
+      inputValues.push(player.username);
+    }
+    const isValid = inputValues.every((input) => input !== '');
+    if (isValid) {
+      return true;
+    }
+  };
+
   return (
     <div>
       <h2>Choose Players</h2>
@@ -30,7 +42,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
       <button onClick={() => setNumberOfPlayers(6)}>6</button>
       <form>
         {playersComponent}
-        <button onClick={startGame}>Start</button>
+        {validateInputs() ? <button onClick={startGame}>Start</button> : null}
       </form>
     </div>
   );
