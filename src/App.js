@@ -61,8 +61,9 @@ const App = () => {
   };
 
   const selectPlayer = (e) => {
+    console.log(e.currentTarget);
     setActivePlayer(
-      players.find((item) => item.username === e.currentTarget.dataset.id)
+      players.find((player) => player.id === parseInt(e.currentTarget.dataset.id))
     );
   };
 
