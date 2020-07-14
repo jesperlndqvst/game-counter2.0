@@ -49,7 +49,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
             type='text'
             id='3'
             placeholder='Player 3'
-            value={players[0].player3.username || ''}
+            value={players[2].username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -60,7 +60,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
             type='text'
             id='4'
             placeholder='Player 4'
-            value={players[0].player4.username || ''}
+            value={players[3].username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -70,7 +70,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
             type='text'
             id='5'
             placeholder='Player 5'
-            value={players[0].player5.username || ''}
+            value={players[4].username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />
@@ -80,7 +80,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
             type='text'
             id='6'
             placeholder='Player 6'
-            value={players[0].player6.username || ''}
+            value={players[5].username || ''}
             onChange={updatePlayer}
             autoComplete='off'
           />

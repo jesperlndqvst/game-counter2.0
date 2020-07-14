@@ -44,12 +44,11 @@ const App = () => {
 
   const updatePlayer = (e) => {
     const value = e.target.value;
-
-    console.log(e.target);
-    console.log(players);
-
-    setPlayers(players[0].username = value);
-    console.log(players);
+    const id = parseInt(e.target.id);
+    const playerId = players.find(el => el.id === id).id;
+    let newArry = [...players];
+    newArry[playerId -1].username = value
+    setPlayers(newArry);
   };
 
   const startGame = (e) => {
