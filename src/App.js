@@ -65,10 +65,10 @@ const App = () => {
     );
   };
 
-  const updateScore = () => {
+  const updateScore = (value) => {
     const playerId = activePlayer.id;
     let newArray = [...players];
-    newArray[playerId - 1].score += 5;
+    newArray[playerId - 1].score += value;
     setPlayers(newArray);
   };
 
