@@ -7,46 +7,10 @@ import Start from './pages/Start';
 import Game from './pages/Game';
 import NotFound from './pages/NotFound';
 
-const App = () => {
-  const [players, setPlayers] = useState([
-    {
-      id: 1,
-      username: '',
-      score: 0,
-      active: true,
-    },
-    {
-      id: 2,
-      username: '',
-      score: 0,
-      active: false,
-    },
-    {
-      id: 3,
-      username: '',
-      score: 0,
-      active: false,
-    },
-    {
-      id: 4,
-      username: '',
-      score: 0,
-      active: false,
-    },
-    {
-      id: 5,
-      username: '',
-      score: 0,
-      active: false,
-    },
-    {
-      id: 6,
-      username: '',
-      score: 0,
-      active: false,
-    },
-  ]);
+import playersData from "./playersData"
 
+const App = () => {
+  const [players, setPlayers] = useState(playersData);
   const [gameIsStarted, setGameIsStarted] = useState(false);
 
   const updatePlayer = (e) => {
