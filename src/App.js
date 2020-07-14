@@ -13,36 +13,41 @@ const App = () => {
       id: 1,
       username: '',
       score: 0,
+      active: true,
     },
     {
       id: 2,
       username: '',
       score: 0,
+      active: false,
     },
     {
       id: 3,
       username: '',
       score: 0,
+      active: false,
     },
     {
       id: 4,
       username: '',
       score: 0,
+      active: false,
     },
     {
       id: 5,
       username: '',
       score: 0,
+      active: false,
     },
     {
       id: 6,
       username: '',
       score: 0,
+      active: false,
     },
   ]);
 
   const [gameIsStarted, setGameIsStarted] = useState(false);
-  const [activePlayer, setActivePlayer] = useState({});
 
   const updatePlayer = (e) => {
     const value = e.target.value;
@@ -56,19 +61,19 @@ const App = () => {
   const startGame = (e) => {
     e.preventDefault();
     setPlayers(players.filter((players) => players.username !== ''));
-    setActivePlayer(players[0]);
     setGameIsStarted(true);
   };
 
   const selectPlayer = (e) => {
-    console.log(e.currentTarget);
-    setActivePlayer(
-      players.find((player) => player.id === parseInt(e.currentTarget.dataset.id))
-    );
+    const playerId = parseInt(e.currentTarget.dataset.id);
+    let newArray = [...players];
+    newArray.forEach((player) => (player.active = false));
+    newArray[playerId - 1].active = true;
+    setPlayers(newArray);
   };
 
   const updateScore = (value) => {
-    const playerId = activePlayer.id;
+    const playerId = players.find((player) => player.active === true).id;
     let newArray = [...players];
     newArray[playerId - 1].score += value;
     setPlayers(newArray);

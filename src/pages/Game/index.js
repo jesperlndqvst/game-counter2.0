@@ -3,7 +3,12 @@ import './game.css';
 
 const Game = ({ players, selectPlayer, updateScore }) => {
   const playersCompenent = players.map((player) => (
-    <div data-id={player.id} onClick={selectPlayer} key={player.username}>
+    <div
+      className={player.active ? 'active' : ''}
+      data-id={player.id}
+      onClick={selectPlayer}
+      key={player.username}
+    >
       <p>{player.username}</p>
       <p>{player.score}</p>
     </div>
