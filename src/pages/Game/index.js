@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
 
 const Game = ({ players }) => {
-  console.log(players);
-  const playersArray = Object.values(players).filter(
-    (players) => players.username !== ''
-  );
-  const [scores, setScores] = useState(playersArray);
+  const playersArray = players.filter((players) => players.username !== '');
   const [activePlayer, setActivePlayer] = useState('');
   const handleClick = (e) => {
     setActivePlayer(
-      scores.find((item) => item.username === e.currentTarget.dataset.id)
+      playersArray.find((item) => item.username === e.currentTarget.dataset.id)
     );
   };
 
   console.log(activePlayer);
 
-  const playersCompenent = scores.map((player) => (
+  const playersCompenent = playersArray.map((player) => (
     <div data-id={player.username} onClick={handleClick} key={player.username}>
       <p>{player.username}</p>
       <p>{player.score}</p>

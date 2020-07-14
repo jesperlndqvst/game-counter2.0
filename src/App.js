@@ -43,13 +43,12 @@ const App = () => {
   const [gameIsStarted, setGameIsStarted] = useState(false);
 
   const updatePlayer = (e) => {
-    console.log(e.target);
     const value = e.target.value;
     const id = parseInt(e.target.id);
     const playerId = players.find(el => el.id === id).id;
-    let newArry = [...players];
-    newArry[playerId -1].username = value
-    setPlayers(newArry);
+    let newArray = [...players];
+    newArray[playerId -1].username = value
+    setPlayers(newArray);
   };
 
   const startGame = (e) => {
