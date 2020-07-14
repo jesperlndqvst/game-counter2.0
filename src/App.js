@@ -56,6 +56,7 @@ const App = () => {
   const startGame = (e) => {
     e.preventDefault();
     setPlayers(players.filter((players) => players.username !== ''));
+    setActivePlayer(players[0]);
     setGameIsStarted(true);
   };
 
