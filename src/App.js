@@ -25,11 +25,6 @@ const App = () => {
       score: 0,
     },
     {
-      id: 3,
-      username: '',
-      score: 0,
-    },
-    {
       id: 4,
       username: '',
       score: 0,
@@ -39,10 +34,16 @@ const App = () => {
       username: '',
       score: 0,
     },
+    {
+      id: 6,
+      username: '',
+      score: 0,
+    },
   ]);
   const [gameIsStarted, setGameIsStarted] = useState(false);
 
   const updatePlayer = (e) => {
+    console.log(e.target);
     const value = e.target.value;
     const id = parseInt(e.target.id);
     const playerId = players.find(el => el.id === id).id;
