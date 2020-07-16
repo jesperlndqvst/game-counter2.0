@@ -7,7 +7,7 @@ import Start from './pages/Start';
 import Game from './pages/Game';
 import NotFound from './pages/NotFound';
 
-import playersData from "./playersData"
+import playersData from './playersData';
 
 const App = () => {
   const [players, setPlayers] = useState(playersData);
@@ -43,15 +43,29 @@ const App = () => {
     setPlayers(newArray);
   };
 
+  const newGame = () => {
+    setGameIsStarted(false);
+    let newArray = [...playersData];
+    for (let i = 0; i < newArray.length; i++) {
+      const player = newArray[i];
+      player.id = i + 1;
+      player.username = '';
+      player.score = 0;
+      player.active = false;
+    }
+    newArray[0].active = true;
+    setPlayers(newArray);
+  };
+
   const resetGame = () => {
     let newArray = [...players];
-    newArray.forEach(player => {
+    newArray.forEach((player) => {
       player.score = 0;
       player.active = false;
     });
     newArray[0].active = true;
     setPlayers(newArray);
-  }
+  };
 
   return (
     <div className='App'>
@@ -66,6 +80,7 @@ const App = () => {
           players={players}
           selectPlayer={selectPlayer}
           updateScore={updateScore}
+          newGame={newGame}
           resetGame={resetGame}
         />
       )}

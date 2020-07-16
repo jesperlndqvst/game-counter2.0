@@ -1,13 +1,13 @@
 import React from 'react';
 import './game.css';
 
-const Game = ({ players, selectPlayer, updateScore, resetGame }) => {
+const Game = ({ players, selectPlayer, updateScore, newGame, resetGame }) => {
   const playersCompenent = players.map((player) => (
     <div
       className={player.active ? 'active' : ''}
       data-id={player.id}
       onClick={selectPlayer}
-      key={player.username}
+      key={player.id}
     >
       <p>{player.username}</p>
       <p>{player.score}</p>
@@ -17,7 +17,7 @@ const Game = ({ players, selectPlayer, updateScore, resetGame }) => {
   return (
     <div>
       <div>
-        <button>New Game</button>
+        <button onClick={newGame}>New Game</button>
         <button onClick={resetGame}>Reset</button>
       </div>
       {playersCompenent}
