@@ -43,6 +43,16 @@ const App = () => {
     setPlayers(newArray);
   };
 
+  const resetGame = () => {
+    let newArray = [...players];
+    newArray.forEach(player => {
+      player.score = 0;
+      player.active = false;
+    });
+    newArray[0].active = true;
+    setPlayers(newArray);
+  }
+
   return (
     <div className='App'>
       {!gameIsStarted ? (
@@ -56,6 +66,7 @@ const App = () => {
           players={players}
           selectPlayer={selectPlayer}
           updateScore={updateScore}
+          resetGame={resetGame}
         />
       )}
     </div>

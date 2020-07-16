@@ -1,7 +1,7 @@
 import React from 'react';
 import './game.css';
 
-const Game = ({ players, selectPlayer, updateScore }) => {
+const Game = ({ players, selectPlayer, updateScore, resetGame }) => {
   const playersCompenent = players.map((player) => (
     <div
       className={player.active ? 'active' : ''}
@@ -16,6 +16,10 @@ const Game = ({ players, selectPlayer, updateScore }) => {
 
   return (
     <div>
+      <div>
+        <button>New Game</button>
+        <button onClick={resetGame}>Reset</button>
+      </div>
       {playersCompenent}
       <button onClick={() => updateScore(-5)}>-5</button>
       <button onClick={() => updateScore(-1)}>-1</button>
