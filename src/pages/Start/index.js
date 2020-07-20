@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './start.css';
 
 const Start = ({ players, updatePlayer, startGame }) => {
   const [numberOfPlayers, setNumberOfPlayers] = useState(2);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, [numberOfPlayers]);
 
   let playersComponent = [];
 
@@ -10,6 +15,7 @@ const Start = ({ players, updatePlayer, startGame }) => {
     const player = players[i];
     playersComponent.push(
       <input
+        ref={i === 0 ? inputRef : null}
         key={player.id}
         id={player.id}
         placeholder={`Player ${player.id}`}
