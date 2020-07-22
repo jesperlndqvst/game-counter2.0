@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-
-// Pages
-
-import Start from './pages/Start';
-import Game from './pages/Game';
+import Start from './components/Start';
+import Game from './components/Game';
 
 import playersData from './playersData';
 
@@ -15,7 +12,7 @@ const App = () => {
     prevPlayers ? true : false
   );
 
-  const updatePlayer = (e) => {
+  const updateUsername = (e) => {
     const value = e.target.value;
     const id = parseInt(e.target.id);
     const playerId = players.find((el) => el.id === id).id;
@@ -75,7 +72,7 @@ const App = () => {
       {!gameIsStarted ? (
         <Start
           players={players}
-          updatePlayer={updatePlayer}
+          updateUsername={updateUsername}
           startGame={startGame}
         />
       ) : (

@@ -1,9 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import validateInputs from '../../functions/validateInputs';
-import './start.css';
+import styled from 'styled-components';
 
-const Start = ({ players, updatePlayer, startGame }) => {
+const StartStyled = styled.div`
+  h2 {
+    font-size: 24px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const Start = ({ players, updateUsername, startGame }) => {
   const [numberOfPlayers, setNumberOfPlayers] = useState(2);
   const inputRef = useRef(null);
 
@@ -11,25 +21,25 @@ const Start = ({ players, updatePlayer, startGame }) => {
     inputRef.current.focus();
   }, [numberOfPlayers]);
 
-  let playersComponent = [];
+  let inputsComponent = [];
 
   for (let i = 0; i < numberOfPlayers; i++) {
     const player = players[i];
-    playersComponent.push(
+    inputsComponent.push(
       <input
         ref={i === 0 ? inputRef : null}
         key={player.id}
         id={player.id}
         placeholder={`Player ${player.id}`}
         value={player.username}
-        onChange={updatePlayer}
+        onChange={updateUsername}
         autoComplete='off'
       />
     );
   }
 
   return (
-    <div>
+    <StartStyled>
       <h2>Choose Players</h2>
       <button onClick={() => setNumberOfPlayers(2)}>2</button>
       <button onClick={() => setNumberOfPlayers(3)}>3</button>
@@ -37,21 +47,19 @@ const Start = ({ players, updatePlayer, startGame }) => {
       <button onClick={() => setNumberOfPlayers(5)}>5</button>
       <button onClick={() => setNumberOfPlayers(6)}>6</button>
       <form>
-        {playersComponent}
+        {inputsComponent}
         {validateInputs(numberOfPlayers, players) ? (
           <button onClick={startGame}>Start</button>
         ) : null}
       </form>
-    </div>
+    </StartStyled>
   );
 };
 
 Start.propTypes = {
   players: PropTypes.array,
-  selectPlayer: PropTypes.func,
-  updateScore: PropTypes.func,
-  newGame: PropTypes.func,
-  resetGame: PropTypes.func,
+  updateUsername: PropTypes.func,
+  startGame: PropTypes.func,
 };
 
 export default Start;
