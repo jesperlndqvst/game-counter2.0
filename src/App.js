@@ -5,13 +5,15 @@ import './App.css';
 
 import Start from './pages/Start';
 import Game from './pages/Game';
-import NotFound from './pages/NotFound';
 
 import playersData from './playersData';
 
 const App = () => {
-  const [players, setPlayers] = useState(playersData);
-  const [gameIsStarted, setGameIsStarted] = useState(false);
+  const prevPlayers = JSON.parse(localStorage.getItem('prevPlayers'));
+  const [players, setPlayers] = useState(prevPlayers || playersData);
+  const [gameIsStarted, setGameIsStarted] = useState(
+    prevPlayers ? true : false
+  );
 
   const updatePlayer = (e) => {
     const value = e.target.value;
@@ -41,6 +43,7 @@ const App = () => {
     let newArray = [...players];
     newArray[playerId - 1].score += value;
     setPlayers(newArray);
+    localStorage.setItem('prevPlayers', JSON.stringify(newArray));
   };
 
   const newGame = () => {

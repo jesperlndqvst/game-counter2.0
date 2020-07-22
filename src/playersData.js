@@ -1,4 +1,4 @@
-const playersData = [
+let playersData = [
   {
     id: 1,
     username: '',
