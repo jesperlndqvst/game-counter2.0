@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './game.css';
 
 const Game = ({ players, selectPlayer, updateScore, newGame, resetGame }) => {
@@ -27,6 +28,14 @@ const Game = ({ players, selectPlayer, updateScore, newGame, resetGame }) => {
       <button onClick={() => updateScore(5)}>+5</button>
     </div>
   );
+};
+
+Game.propTypes = {
+  players: PropTypes.array,
+  selectPlayer: PropTypes.func,
+  updateScore: PropTypes.func,
+  newGame: PropTypes.func,
+  resetGame: PropTypes.func,
 };
 
 export default Game;

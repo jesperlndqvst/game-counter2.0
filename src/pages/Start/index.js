@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import validateInputs from '../../functions/validateInputs';
 import './start.css';
 
@@ -43,6 +44,14 @@ const Start = ({ players, updatePlayer, startGame }) => {
       </form>
     </div>
   );
+};
+
+Start.propTypes = {
+  players: PropTypes.array,
+  selectPlayer: PropTypes.func,
+  updateScore: PropTypes.func,
+  newGame: PropTypes.func,
+  resetGame: PropTypes.func,
 };
 
 export default Start;
