@@ -18,40 +18,20 @@ const ChoosePlayerBtnsStyled = styled.div`
 `;
 
 const ChoosePlayerBtns = ({ numberOfPlayers, changeNumberOfPlayers }) => {
-  return (
-    <ChoosePlayerBtnsStyled>
+  let btnsComponent = [];
+
+  for (let i = 2; i <= 6; i++) {
+    btnsComponent.push(
       <button
-        className={numberOfPlayers === 2 ? 'active' : ''}
-        onClick={() => changeNumberOfPlayers(2)}
+        className={numberOfPlayers === i ? 'active' : ''}
+        onClick={() => changeNumberOfPlayers(i)}
       >
-        2
+        {i}
       </button>
-      <button
-        className={numberOfPlayers === 3 ? 'active' : ''}
-        onClick={() => changeNumberOfPlayers(3)}
-      >
-        3
-      </button>
-      <button
-        className={numberOfPlayers === 4 ? 'active' : ''}
-        onClick={() => changeNumberOfPlayers(4)}
-      >
-        4
-      </button>
-      <button
-        className={numberOfPlayers === 5 ? 'active' : ''}
-        onClick={() => changeNumberOfPlayers(5)}
-      >
-        5
-      </button>
-      <button
-        className={numberOfPlayers === 6 ? 'active' : ''}
-        onClick={() => changeNumberOfPlayers(6)}
-      >
-        6
-      </button>
-    </ChoosePlayerBtnsStyled>
-  );
+    );
+  }
+
+  return <ChoosePlayerBtnsStyled>{btnsComponent}</ChoosePlayerBtnsStyled>;
 };
 
 ChoosePlayerBtns.propTypes = {
