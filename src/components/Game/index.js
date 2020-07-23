@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Players from "../Players"
 
 const GameStyled = styled.div`
   display: flex;
@@ -21,19 +22,6 @@ const GameStyled = styled.div`
     }
   }
 
-  .player {
-    display: flex;
-    justify-content: space-between;
-    font-size: 52px;
-    > p {
-      padding: 5px 15px;
-    }
-  }
-  .active {
-    background-color: var(--orange-color);
-    color: #fff;
-  }
-
   .score-btns {
     display: flex;
     margin: 0 15px;
@@ -46,25 +34,13 @@ const GameStyled = styled.div`
 `;
 
 const Game = ({ players, selectPlayer, updateScore, newGame, resetGame }) => {
-  const playersCompenent = players.map((player) => (
-    <div
-      className={`player ${player.active ? 'active' : ''}`}
-      data-id={player.id}
-      onClick={selectPlayer}
-      key={player.id}
-    >
-      <p>{player.username}</p>
-      <p>{player.score}</p>
-    </div>
-  ));
-
   return (
     <GameStyled>
       <div className='game-btns'>
         <button onClick={newGame}>New Game</button>
         <button onClick={resetGame}>Reset</button>
       </div>
-      <div>{playersCompenent}</div>
+      <Players players={players} selectPlayer={selectPlayer} />
       <div className='score-btns'>
         <button onClick={() => updateScore(-5)}>-5</button>
         <button onClick={() => updateScore(-1)}>-1</button>

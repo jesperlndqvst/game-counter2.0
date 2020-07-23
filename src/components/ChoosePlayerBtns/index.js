@@ -23,6 +23,7 @@ const ChoosePlayerBtns = ({ numberOfPlayers, changeNumberOfPlayers }) => {
   for (let i = 2; i <= 6; i++) {
     btnsComponent.push(
       <button
+        key={i}
         className={numberOfPlayers === i ? 'active' : ''}
         onClick={() => changeNumberOfPlayers(i)}
       >
