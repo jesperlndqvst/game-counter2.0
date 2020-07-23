@@ -34,8 +34,8 @@ const Players = ({ players, selectPlayer }) => {
 };
 
 Players.propTypes = {
-  numberOfPlayers: PropTypes.number,
-  changeNumberOfPlayers: PropTypes.func,
+  players: PropTypes.array,
+  selectPlayer: PropTypes.func,
 };
 
 export default Players;
