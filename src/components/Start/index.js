@@ -6,13 +6,12 @@ import styled from 'styled-components';
 const StartStyled = styled.div`
   display: flex;
   flex-direction: column;
-  width: 95vw;
-  height: 100vh;
+  
 
   h2 {
     font-size: 42px;
     color: var(--black-color);
-    margin: 30px 0;
+    margin-bottom: 15px;
   }
 
   .buttons-container {
@@ -30,23 +29,23 @@ const StartStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 75vh;
 
     .inputs-container {
       display: flex;
       flex-direction: column;
-      margin-top: 20px;
+      margin-top: 15px;
       width: 100%;
 
       input {
         padding: 6px;
         margin: 6px 0;
         font-size: 36px;
-        border: 1px solid var(--black-color);
-        border-radius: 12px;
+        border: none;
       }
     }
     button {
-      margin-top: 10px;
       width: 200px;
       background-color: var(--orange-color);
       font-size: 36px;
