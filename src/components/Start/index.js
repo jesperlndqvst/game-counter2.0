@@ -6,7 +6,6 @@ import styled from 'styled-components';
 const StartStyled = styled.div`
   display: flex;
   flex-direction: column;
-  
 
   h2 {
     font-size: 42px;
@@ -22,6 +21,10 @@ const StartStyled = styled.div`
       font-size: 24px;
       min-width: 60px;
       background-color: var(--grey-color);
+    }
+    .active {
+      background: var(--orange-color);
+      color: #fff;
     }
   }
 
@@ -83,18 +86,41 @@ const Start = ({ players, updateUsername, startGame }) => {
     <StartStyled>
       <h2>Choose Players</h2>
       <div className='buttons-container'>
-        <button onClick={() => setNumberOfPlayers(2)}>2</button>
-        <button onClick={() => setNumberOfPlayers(3)}>3</button>
-        <button onClick={() => setNumberOfPlayers(4)}>4</button>
-        <button onClick={() => setNumberOfPlayers(5)}>5</button>
-        <button onClick={() => setNumberOfPlayers(6)}>6</button>
+        <button
+          className={numberOfPlayers === 2 ? 'active' : ''}
+          onClick={() => setNumberOfPlayers(2)}
+        >
+          2
+        </button>
+        <button
+          className={numberOfPlayers === 3 ? 'active' : ''}
+          onClick={() => setNumberOfPlayers(3)}
+        >
+          3
+        </button>
+        <button
+          className={numberOfPlayers === 4 ? 'active' : ''}
+          onClick={() => setNumberOfPlayers(4)}
+        >
+          4
+        </button>
+        <button
+          className={numberOfPlayers === 5 ? 'active' : ''}
+          onClick={() => setNumberOfPlayers(5)}
+        >
+          5
+        </button>
+        <button
+          className={numberOfPlayers === 6 ? 'active' : ''}
+          onClick={() => setNumberOfPlayers(6)}
+        >
+          6
+        </button>
       </div>
       <form>
         <div className='inputs-container'>{inputsComponent}</div>
         {validateInputs(numberOfPlayers, players) && (
-          <button onClick={startGame}>
-            Start
-          </button>
+          <button onClick={startGame}>Start</button>
         )}
       </form>
     </StartStyled>
