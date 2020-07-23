@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const StartStyled = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 
   h2 {
     font-size: 42px;
