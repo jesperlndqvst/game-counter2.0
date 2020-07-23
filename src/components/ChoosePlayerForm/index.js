@@ -21,6 +21,7 @@ const ChoosePlayerFormStyled = styled.form`
       margin: 6px 0;
       font-size: 36px;
       border: none;
+      background-color: var(--white-color);
     }
   }
   button {
