@@ -9,7 +9,7 @@ const GameStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 89vh;
+  height: 100vh;
 `;
 
 const Game = ({ players, selectPlayer, updateScore, newGame, resetGame }) => {
