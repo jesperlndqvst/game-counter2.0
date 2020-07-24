@@ -28,7 +28,7 @@ const ChoosePlayerFormStyled = styled.form`
     width: 200px;
     display: block;
     background-color: var(--orange-color);
-    font-size: 36px;
+    font-size: 30px;
     color: #fff;
   }
 `;
