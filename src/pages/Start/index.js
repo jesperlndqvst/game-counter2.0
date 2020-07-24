@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ChoosePlayerBtns from '../../components/ChoosePlayerBtns';
@@ -16,9 +16,13 @@ const StartStyled = styled.div`
   }
 `;
 
-const Start = ({ numberOfPlayers, changeNumberOfPlayers, players, updateUsername, startGame }) => {
- 
-
+const Start = ({
+  numberOfPlayers,
+  changeNumberOfPlayers,
+  players,
+  updateUsername,
+  startGame,
+}) => {
   return (
     <StartStyled>
       <h2>Choose Players</h2>
