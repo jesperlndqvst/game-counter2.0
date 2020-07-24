@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Players from '../Players';
-import ScoreBtns from '../ScoreBtns';
-import GameBtns from '../GameBtns';
+import Players from '../../components/Players';
+import ScoreBtns from '../../components/ScoreBtns';
+import GameBtns from '../../components/GameBtns';
 
 const GameStyled = styled.div`
   display: flex;

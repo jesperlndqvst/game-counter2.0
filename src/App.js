@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Start from './components/Start';
-import Game from './components/Game';
+import Start from './pages/Start';
+import Game from './pages/Game';
 
 import playersData from './playersData';
 

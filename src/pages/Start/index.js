@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import ChoosePlayerBtns from '../ChoosePlayerBtns';
-import ChoosePlayerForm from '../ChoosePlayerForm';
+import ChoosePlayerBtns from '../../components/ChoosePlayerBtns';
+import ChoosePlayerForm from '../../components/ChoosePlayerForm';
 
 const StartStyled = styled.div`
   display: flex;
