@@ -6,7 +6,7 @@ const PlayersStyled = styled.div`
   .player {
     display: flex;
     justify-content: space-between;
-    font-size: 52px;
+    font-size: 42px;
     > p {
       padding: 5px 15px;
     }

@@ -4,10 +4,11 @@ import styled from 'styled-components';
 
 const ScoreBtnsStyled = styled.div`
   display: flex;
-  margin: 0 15px;
+  padding: 20px 15px;
   justify-content: space-between;
   button {
     font-size: 24px;
+    background-color: var(--grey-color);
     width: 75px;
   }
 `;

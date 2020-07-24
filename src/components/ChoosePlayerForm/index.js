@@ -19,7 +19,7 @@ const ChoosePlayerFormStyled = styled.form`
     input {
       padding: 6px;
       margin: 6px 0;
-      font-size: 36px;
+      font-size: 34px;
       border: none;
       background-color: var(--white-color);
     }
