@@ -12,7 +12,7 @@ const RestartBtns = ({ handleClick }) => {
   return (
     <RestartBtnsStyled>
       <button onClick={() => handleClick('newGame')}>New Game</button>
-      <button onClick={handleClick}>Reset</button>
+      <button onClick={() => handleClick('reset')}>Reset</button>
     </RestartBtnsStyled>
   );
 };

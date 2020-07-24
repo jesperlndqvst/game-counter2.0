@@ -8,9 +8,9 @@ const ConfirmBtnsStyled = styled.div`
   }
 `;
 
-const ConfirmBtns = ({ newGame, resetGame, wantsNewGame, closeConfirm }) => {
+const ConfirmBtns = ({ newGame, resetGame, endType, closeConfirm }) => {
   const handleClick = () => {
-    wantsNewGame ? newGame() : resetGame();
+    endType === 'newGame' ? newGame() : resetGame();
     closeConfirm();
   };
 

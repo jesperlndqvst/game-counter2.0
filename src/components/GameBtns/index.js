@@ -22,13 +22,11 @@ const GameBtnsStyled = styled.div`
 
 const GameBtns = ({ newGame, resetGame }) => {
   const [wantsEndGame, setWantsEndGame] = useState(false);
-  const [wantsNewGame, setWantsNewGame] = useState(false);
+  const [endType, setEndType] = useState('');
 
   const handleClick = (type) => {
     setWantsEndGame(true);
-    if (type === 'newGame') {
-      setWantsNewGame(true);
-    }
+    setEndType(type);
   };
 
   const closeConfirm = () => setWantsEndGame(false);
@@ -41,7 +39,7 @@ const GameBtns = ({ newGame, resetGame }) => {
         <ConfirmBtns
           newGame={newGame}
           resetGame={resetGame}
-          wantsNewGame={wantsNewGame}
+          endType={endType}
           closeConfirm={closeConfirm}
         />
       )}
