@@ -1,5 +1,5 @@
 # GameCounter2.0
-This is the result of me deciding to rebuild my old score keeping app in order to practice my skills in React. Use it for all types of games that need score keeping. No installation is required and the points are saved in local storage in the event of an interruption.
+This is the result of me deciding to rebuild [my old score keeping app](https://github.com/jesperlndqvst/game-counter) in order to practice my skills in React. Use it for all types of games that need score keeping. No installation is required and the points are saved in local storage in the event of an interruption.
 
 ## How to use it
 1. Clone this repo in GitHub Desktop, in your terminal or go to: https://game-counter.netlify.com/
