@@ -5,6 +5,8 @@
     text-transform: uppercase;
     font-family: 'PT Sans', sans-serif;
     height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 button {
