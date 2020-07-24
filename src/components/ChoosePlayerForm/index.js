@@ -8,7 +8,8 @@ const ChoosePlayerFormStyled = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 72vh;
+  height: 80vh;
+  background: blue;
 
   div {
     display: flex;
@@ -26,6 +27,7 @@ const ChoosePlayerFormStyled = styled.form`
   }
   button {
     width: 200px;
+    display: block;
     background-color: var(--orange-color);
     font-size: 36px;
     color: #fff;
