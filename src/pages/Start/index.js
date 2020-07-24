@@ -16,10 +16,8 @@ const StartStyled = styled.div`
   }
 `;
 
-const Start = ({ players, updateUsername, startGame }) => {
-  const [numberOfPlayers, setNumberOfPlayers] = useState(2);
-
-  const changeNumberOfPlayers = (number) => setNumberOfPlayers(number);
+const Start = ({ numberOfPlayers, changeNumberOfPlayers, players, updateUsername, startGame }) => {
+ 
 
   return (
     <StartStyled>

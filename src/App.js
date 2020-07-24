@@ -7,10 +7,13 @@ import playersData from './playersData';
 
 const App = () => {
   const prevPlayers = JSON.parse(localStorage.getItem('prevPlayers'));
+  const [numberOfPlayers, setNumberOfPlayers] = useState(2);
   const [players, setPlayers] = useState(prevPlayers || playersData);
   const [gameIsStarted, setGameIsStarted] = useState(
     prevPlayers ? true : false
   );
+
+  const changeNumberOfPlayers = (number) => setNumberOfPlayers(number);
 
   const updateUsername = (e) => {
     const value = e.target.value;
@@ -23,7 +26,11 @@ const App = () => {
 
   const startGame = (e) => {
     e.preventDefault();
-    setPlayers(players.filter((players) => players.username !== ''));
+    let newArray = [...players];
+    newArray = newArray.filter(
+      (players) => players.username !== '' && players.id <= numberOfPlayers
+    );
+    setPlayers(newArray);
     setGameIsStarted(true);
   };
 
@@ -74,6 +81,8 @@ const App = () => {
     <div className='App'>
       {!gameIsStarted ? (
         <Start
+          numberOfPlayers={numberOfPlayers}
+          changeNumberOfPlayers={changeNumberOfPlayers}
           players={players}
           updateUsername={updateUsername}
           startGame={startGame}
