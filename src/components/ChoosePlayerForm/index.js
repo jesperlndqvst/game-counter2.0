@@ -58,6 +58,7 @@ const ChoosePlayerForm = ({
         value={player.username}
         onChange={updateUsername}
         autoComplete='off'
+        maxLength='10'
       />
     );
   }
