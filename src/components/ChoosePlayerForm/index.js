@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import validateInputs from '../../functions/validateInputs';
@@ -38,13 +38,13 @@ const ChoosePlayerForm = ({
   updateUsername,
   startGame,
 }) => {
-  const inputRef = useRef(null);
+  // const inputRef = useRef(null);
 
-  console.log("TEST");
+  // console.log("TEST");
 
-  useEffect(() => {
-    inputRef.current.focus();
-  }, [numberOfPlayers]);
+  // useEffect(() => {
+  //   inputRef.current.focus();
+  // }, [numberOfPlayers]);
 
   let inputsComponent = [];
 
