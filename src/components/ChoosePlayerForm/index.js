@@ -9,7 +9,6 @@ const ChoosePlayerFormStyled = styled.form`
   align-items: center;
   justify-content: space-between;
   height: 80vh;
-  background: blue;
 
   div {
     display: flex;
@@ -20,7 +19,7 @@ const ChoosePlayerFormStyled = styled.form`
     input {
       padding: 6px;
       margin: 6px 0;
-      font-size: 34px;
+      font-size: 32px;
       border: none;
       background-color: var(--white-color);
     }
