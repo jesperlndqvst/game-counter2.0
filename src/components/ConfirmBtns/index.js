@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-
+const ConfirmBtnsStyled = styled.div`
+  button {
+    width: 105px;
+  }
+`;
 
 const ConfirmBtns = ({ newGame, resetGame, wantsNewGame, closeConfirm }) => {
   const handleClick = () => {
@@ -11,11 +15,11 @@ const ConfirmBtns = ({ newGame, resetGame, wantsNewGame, closeConfirm }) => {
   };
 
   return (
-    <>
+    <ConfirmBtnsStyled>
       <p>Are you sure?</p>
       <button onClick={handleClick}>Yes</button>
       <button onClick={closeConfirm}>No</button>
-    </>
+    </ConfirmBtnsStyled>
   );
 };
 

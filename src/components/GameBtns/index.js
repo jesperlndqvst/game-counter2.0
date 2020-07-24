@@ -5,19 +5,19 @@ import RestartBtns from '../RestartBtns';
 import ConfirmBtns from '../ConfirmBtns';
 
 const GameBtnsStyled = styled.div`
-  display: flex;
-  width: 100%;
-  height: 70px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 15px 0 15px;
+  div {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px 0 15px;
+  }
 
   button {
     background-color: var(--grey-color);
     font-size: 16px;
-    width: 150px;
   }
-  
 `;
 
 const GameBtns = ({ newGame, resetGame }) => {
