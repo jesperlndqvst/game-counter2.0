@@ -8,7 +8,7 @@ const ChoosePlayerFormStyled = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 75vh;
+  height: 72vh;
 
   div {
     display: flex;
