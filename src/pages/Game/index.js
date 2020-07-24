@@ -9,7 +9,8 @@ const GameStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 90vh;
+  height: 89vh;
+  background-color: blue;
 `;
 
 const Game = ({ players, selectPlayer, updateScore, newGame, resetGame }) => {

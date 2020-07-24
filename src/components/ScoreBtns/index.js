@@ -7,6 +7,7 @@ const ScoreBtnsStyled = styled.div`
   padding: 20px 15px;
   justify-content: space-between;
   button {
+    display: block;
     font-size: 24px;
     background-color: var(--grey-color);
     width: 75px;
