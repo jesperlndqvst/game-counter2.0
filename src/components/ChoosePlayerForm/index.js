@@ -52,7 +52,7 @@ const ChoosePlayerForm = ({
     const player = players[i];
     inputsComponent.push(
       <input
-        ref={i === 0 ? inputRef : null}
+        // ref={i === 0 ? inputRef : null}
         key={player.id}
         id={player.id}
         placeholder={`Player ${player.id}`}
