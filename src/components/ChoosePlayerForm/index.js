@@ -22,6 +22,7 @@ const ChoosePlayerFormStyled = styled.form`
       font-size: 36px;
       border: none;
       background-color: var(--white-color);
+      background: blue;
     }
   }
   button {
@@ -40,9 +41,9 @@ const ChoosePlayerForm = ({
 }) => {
   const inputRef = useRef(null);
 
-  useEffect(() => {
-    inputRef.current.focus();
-  }, [numberOfPlayers]);
+  // useEffect(() => {
+  //   inputRef.current.focus();
+  // }, [numberOfPlayers]);
 
   let inputsComponent = [];
 
