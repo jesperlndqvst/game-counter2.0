@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-transform: uppercase;
   outline: none;
+   touch-action: manipulation;
 }
 
 :root {

@@ -40,8 +40,6 @@ const ChoosePlayerForm = ({
 }) => {
   const inputRef = useRef(null);
 
-  console.log("TEST");
-
   useEffect(() => {
     inputRef.current.focus();
   }, [numberOfPlayers]);
