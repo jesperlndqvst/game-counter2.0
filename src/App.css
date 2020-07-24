@@ -12,6 +12,6 @@ button {
     white-space: nowrap;
     padding: 8px 16px;
     border-radius: 18px;
-    border: none;
+    border: 1px;
     user-select: none;
 }
