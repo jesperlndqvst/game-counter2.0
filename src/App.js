@@ -54,6 +54,7 @@ const App = () => {
       player.active = false;
     }
     newArray[0].active = true;
+    localStorage.removeItem('prevPlayers');
     setPlayers(newArray);
   };
 
@@ -64,6 +65,8 @@ const App = () => {
       player.active = false;
     });
     newArray[0].active = true;
+    localStorage.removeItem('prevPlayers');
+    localStorage.setItem('prevPlayers', JSON.stringify(newArray));
     setPlayers(newArray);
   };
 
