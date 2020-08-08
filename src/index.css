@@ -6,7 +6,7 @@
   box-sizing: border-box;
   text-transform: uppercase;
   outline: none;
-   touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 :root {
@@ -18,4 +18,7 @@
 
 body {
   background-color: var(--white-color);
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
