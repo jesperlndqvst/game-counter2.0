@@ -10,7 +10,7 @@ Keep it on your home screen by downloading it as PWA. Available on [Progressive 
 
 
 ## Preview
-<img src="https://i.imgur.com/B1FSppB.png" width="33%" /> <img src="https://i.imgur.com/O6z2Jlv.png" width="33%" /> <img src="https://i.imgur.com/hdjCs0g.png" width="33%" />
+<img src="https://i.imgur.com/G1p1rPT.png" width="33%" /> <img src="https://i.imgur.com/aYhlzVx.png" width="33%" /> <img src="https://i.imgur.com/hdjCs0g.png" width="33%" />
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
