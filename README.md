@@ -8,8 +8,9 @@ This is the result of me deciding to rebuild [my old score keeping app](https://
 ## Available as PWA
 Keep it on your home screen by downloading it as PWA. Available on [Progressive App Store](https://progressiveapp.store/pwa/GameCounter)
 
+
 ## Preview
-<img src="https://i.imgur.com/B1FSppB.png" width="33%" /> <img src="https://i.imgur.com/O6z2Jlv.png" width="33%" />
+<img src="https://i.imgur.com/B1FSppB.png" width="33%" /> <img src="https://i.imgur.com/O6z2Jlv.png" width="33%" /> <img src="https://i.imgur.com/hdjCs0g.png" width="33%" />
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
