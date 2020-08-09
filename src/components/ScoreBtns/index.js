@@ -12,7 +12,6 @@ const ScoreBtnsStyled = styled.div`
     width: 75px;
     height: 55px;
     min-height: 55px;
-    display: block;
   }
 `;
 
