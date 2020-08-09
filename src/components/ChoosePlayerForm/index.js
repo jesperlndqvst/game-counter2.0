@@ -31,6 +31,12 @@ const ChoosePlayerFormStyled = styled.form`
     font-size: 30px;
     color: #fff;
   }
+  @media (prefers-color-scheme: dark) {
+    div input {
+      background-color: var(--black-color);
+      color: var(--white-color);
+    }
+  }
 `;
 
 const ChoosePlayerForm = ({

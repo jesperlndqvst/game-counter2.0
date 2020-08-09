@@ -13,7 +13,12 @@ const PlayersStyled = styled.div`
   }
   .active {
     background-color: var(--orange-color);
-    color: #fff;
+    color: var(--white-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .player {
+      color: var(--white-color);
+    }
   }
 `;
 

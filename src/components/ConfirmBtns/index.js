@@ -6,6 +6,11 @@ const ConfirmBtnsStyled = styled.div`
   button {
     width: 105px;
   }
+  @media (prefers-color-scheme: dark) {
+    p {
+      color: var(--white-color)
+    }
+  }
 `;
 
 const ConfirmBtns = ({ newGame, resetGame, endType, closeConfirm }) => {

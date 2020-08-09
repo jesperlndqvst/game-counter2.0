@@ -14,6 +14,11 @@ const StartStyled = styled.div`
     color: var(--black-color);
     margin-bottom: 15px;
   }
+  @media (prefers-color-scheme: dark) {
+    h2 {
+      color: var(--white-color);
+    }
+  }
 `;
 
 const Start = ({
