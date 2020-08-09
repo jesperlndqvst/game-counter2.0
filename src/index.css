@@ -22,6 +22,9 @@ body {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   min-height: 100vh;
-  /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
 }
