@@ -16,6 +16,10 @@
   --white-color: #fafafa;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: var(--white-color);
   -webkit-user-select: none;
