@@ -11,8 +11,6 @@ const ScoreBtnsStyled = styled.div`
     background-color: var(--grey-color);
     width: 75px;
     height: 55px;
-    min-height: 55px;
-    border: 1px solid var(--grey-color);
   }
 `;
 
