@@ -11,10 +11,10 @@ This is the result of me deciding to rebuild [my old score keeping app](https://
 - No installation is required and the points are saved in local storage in the event of an interruption.
 
 ## Preview
-<img src="https://i.imgur.com/0rS0XGb.png" width="33%" /> <img src="https://i.imgur.com/XXr1nJl.png" width="33%" /> <img src="https://i.imgur.com/hdjCs0g.png" width="33%" />
+<img src="https://i.imgur.com/0rS0XGb.png" width="32%" /> <img src="https://i.imgur.com/XXr1nJl.png" width="32%" /> <img src="https://i.imgur.com/hdjCs0g.png" width="33%" />
 
 ## Dark Mode Preview
-<img src="https://i.imgur.com/Apofx9o.png" width="33%" /> <img src="https://i.imgur.com/kyjyH0p.png" width="33%" /> 
+<img src="https://i.imgur.com/Apofx9o.png" width="32%" /> <img src="https://i.imgur.com/kyjyH0p.png" width="32%" /> 
 
 
 ## License
