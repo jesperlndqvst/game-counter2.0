@@ -10,8 +10,9 @@ const ScoreBtnsStyled = styled.div`
     font-size: 24px;
     background-color: var(--grey-color);
     width: 75px;
-    height: 60px;
-    min-height: 60px;
+    height: 55px;
+    min-height: 55px;
+    display: block;
   }
 `;
 
