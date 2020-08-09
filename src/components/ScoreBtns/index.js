@@ -5,13 +5,12 @@ import styled from 'styled-components';
 const ScoreBtnsStyled = styled.div`
   display: flex;
   padding: 20px 15px;
-  min-height: 80px;
   justify-content: space-between;
   button {
     font-size: 24px;
     background-color: var(--grey-color);
     width: 75px;
-    height: 100%;
+    height: 50px;
   }
 `;
 
