@@ -18,5 +18,5 @@ This is the result of me deciding to rebuild [my old score keeping app](https://
 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jesperlndqvst/game-counter2.0/blob/master/LICENSE.txt) file for details
 
